@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title> 404 </title>
+        <link rel="icon" href="favicon.ico"><link href="404styles.css" rel="stylesheet">
+    </head>
+<body
+x-data="{ page: '404', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-init="
+         darkMode = JSON.parse(localStorage.getItem('darkMode'));
+         $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+    :class="{'b eh': darkMode === true}">
+
+    <!--===Header start===-->
+    <header>
+      <div class="logo">
+          <img src="images/logo1.png" alt="Pundit Digital" width="160">
+      </div>
+      <!--Navigation Bar-->
+      <nav>
+          <ul>
+              <li><a href="home.html" class="home">Home</a></li>
+              <li><a href="home.html#features" class="features">Features</a></li>
+              <li>
+                  <a href="home.html#pages" class="pages">Pages
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
+                      <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                      </svg>
+                  </a>
+                  <ul>
+                      <li><a href="blog-grid.html">Blog Grid</a></li>
+                      <li><a href="blog-single.html">Blog Single</a></li>
+                      <li><a href="signin.html">Sign In</a></li>
+                      <li><a href="signup.html">Sign Up</a></li>
+                      <li><a href="404.html">404</a></li>
+                  </ul>
+              </li>
+              <li><a href="home.html#support" class="support">Support</a></li>
+              <li><a href="home.html#support" class="support">Contact Us</a></li>
+          </ul>
+      </nav>
+
+      <!--Dark mode Toggle-->
+      <div>
+          <label>
+              <input type="checkbox">
+              <!--Sun icon-->
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill=""></path>
+              </svg>
+              <!--Moon Icon-->
+              <img src="images/icon-moon.svg" alt="Moon" width="25" height="25">
+          </label>
+      </div>
+      <div>
+          <a href="signin.html">Sign In</a>
+          <a href="signup.html" class="signup">Sign Up</a>
+      </div>
+  </header>
+
+<main>
+    <!---===404 start===-->
+    <div class="error-404">
+        <img src="images/shape-06.svg" alt="shape">
+        <img src="images/shape-03.svg" alt="shape">
+        <img src="images/shape-17.svg" alt="shape">
+        <img src="images/shape-18.svg" alt="shape">
+
+        <div>
+            <img src="images/404.svg" alt="404"/><br>
+            <h2> Sorry, the page can't be found</h2><br>
+            <p>The page you were looking for appears to have been moved, deleted or does not exist.</p><br>
+            <a href="./home.html">Back to home</a>
+        </div>
+      </div>
+    <!---===404 end===-->
+</main>
+
+<!---===footer===-->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Footer at the top -->
+    <div class="footer-top">
+      <div class="logo-section">
+        <a href="home.html">
+          <img src="images/logo-light.svg" alt="Logo" class="light-logo">
+          <img src="images/logo-dark.svg" alt="Logo" class="dark-logo">
+        </a>
+        <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <ul class="social-links">
+          <li><a href="#"><img src="images/facebook.svg" alt="Facebook"></a></li>
+          <li><a href="#"><img src="images/twitter.svg" alt="Twitter"></a></li>
+          <li><a href="#"><img src="images/instagram.svg" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a></li>
+        </ul>
+      </div>
+
+      <div class="quick-links-section">
+        <h4 class="section-title">Quick Links</h4>
+        <ul class="quick-links-list">
+          <li><a href="#" class="link-item">Home</a></li>
+          <li><a href="#" class="link-item">Product</a></li>
+          <li><a href="#" class="link-item">Careers <span class="badge">Hiring</span></a></li>
+          <li><a href="#" class="link-item">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="services-section">
+        <h4 class="section-title">Services</h4>
+        <ul class="services-list">
+          <li><a href="#" class="link-item">Web Development</a></li>
+          <li><a href="#" class="link-item">Graphics Design</a></li>
+          <li><a href="#" class="link-item">Digital Marketing</a></li>
+          <li><a href="#" class="link-item">UI/UX Design</a></li>
+        </ul>
+      </div>
+
+      <div class="support-section">
+        <h4 class="section-title">Support</h4>
+        <ul class="support-list">
+          <li><a href="#" class="link-item">Company</a></li>
+          <li><a href="#" class="link-item">Press media</a></li>
+          <li><a href="#" class="link-item">Our Blog</a></li>
+          <li><a href="#" class="link-item">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="newsletter-section">
+        <h4 class="section-title">Newsletter</h4>
+        <p class="newsletter-description">Subscribe to receive future updates</p>
+        <form action="https://formbold.com/s/unique_form_id" method="POST">
+          <input type="text" placeholder="Email address" class="newsletter-input">
+          <button type="submit" class="newsletter-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="submit-icon">
+              <path fill-rule="evenodd"
+                d="M8.294 8.707a1 1 0 0 0 1.32.083l.094-.083L14 4.414V14a1 1 0 1 0 2 0V4a1 1 0 0 0-1-1h-8a1 1 0 0 0-1 1z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer at the bottom -->
+    <div class="footer-bottom">
+      <div class="language-section">
+        <ul class="language-list">
+          <li><a href="#" class="language-link">English</a></li>
+        </ul>
+      </div>
+
+      <div class="copyright-section">
+        <p>&copy; 2025 Base. All rights reserved</p>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+
+  <!---===back to top button===-->
+  <button
+  class="xc wf xf ie ld vg sr gh tr g sa ta _a"
+  @click="window.scrollTo({top: 0, behavior: 'smooth'})"
+  @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false"
+  :class="{ 'uc' : scrollTop }"
+>
+  <svg class="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+  </svg>
+</button>
+
+</body>
+</html>
+
+
